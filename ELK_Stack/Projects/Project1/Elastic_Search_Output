@@ -1,0 +1,723 @@
+{
+    "took": 0,
+    "timed_out": false,
+    "_shards": {
+        "total": 1,
+        "successful": 1,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": {
+            "value": 10000,
+            "relation": "gte"
+        },
+        "max_score": 1.0,
+        "hits": [
+            {
+                "_index": "logs-2025.02.14",
+                "_id": "KDIEA5UBB2ohBGEfwLXP",
+                "_score": 1.0,
+                "_source": {
+                    "input": {
+                        "type": "log"
+                    },
+                    "event": {
+                        "original": "\t/usr/share/fonts/X11"
+                    },
+                    "host": {
+                        "id": "9a51eb060b85489191cab21bfaeaa54f",
+                        "ip": [
+                            "192.168.43.7",
+                            "fe80::fb61:9187:4263:bafc",
+                            "172.19.0.1",
+                            "172.20.0.1",
+                            "172.18.0.1",
+                            "192.168.49.1",
+                            "172.17.0.1"
+                        ],
+                        "mac": [
+                            "02-42-0C-B3-7C-90",
+                            "02-42-42-6B-5C-4C",
+                            "02-42-4D-0D-5C-2E",
+                            "02-42-B8-6B-5B-E2",
+                            "02-42-E8-01-A8-42",
+                            "2C-F0-5D-68-0B-80",
+                            "AC-12-03-03-A0-5C"
+                        ],
+                        "os": {
+                            "kernel": "6.8.0-52-generic",
+                            "codename": "noble",
+                            "family": "debian",
+                            "version": "24.04.1 LTS (Noble Numbat)",
+                            "name": "Ubuntu",
+                            "type": "linux",
+                            "platform": "ubuntu"
+                        },
+                        "name": "siddharth312-gf65-thin-9sd",
+                        "hostname": "siddharth312-GF65-Thin-9SD",
+                        "containerized": false,
+                        "architecture": "x86_64"
+                    },
+                    "agent": {
+                        "name": "siddharth312-GF65-Thin-9SD",
+                        "type": "filebeat",
+                        "ephemeral_id": "f165e64d-523d-41c3-9858-c6860c625b06",
+                        "version": "8.17.1",
+                        "id": "be99e88c-0161-4712-a2ec-982ec7455be8"
+                    },
+                    "message": "\t/usr/share/fonts/X11",
+                    "log": {
+                        "file": {
+                            "path": "/var/log/fontconfig.log"
+                        },
+                        "offset": 60
+                    },
+                    "tags": [
+                        "beats_input_codec_plain_applied",
+                        "_grokparsefailure"
+                    ],
+                    "@timestamp": "2025-02-14T05:53:16.700Z",
+                    "ecs": {
+                        "version": "8.0.0"
+                    },
+                    "@version": "1"
+                }
+            },
+            {
+                "_index": "logs-2025.02.14",
+                "_id": "MDIEA5UBB2ohBGEfwLXQ",
+                "_score": 1.0,
+                "_source": {
+                    "input": {
+                        "type": "log"
+                    },
+                    "event": {
+                        "original": "2024-09-25 00:32:13,478 - main.py[DEBUG]: No kernel command line url found."
+                    },
+                    "host": {
+                        "id": "9a51eb060b85489191cab21bfaeaa54f",
+                        "ip": [
+                            "192.168.43.7",
+                            "fe80::fb61:9187:4263:bafc",
+                            "172.19.0.1",
+                            "172.20.0.1",
+                            "172.18.0.1",
+                            "192.168.49.1",
+                            "172.17.0.1"
+                        ],
+                        "mac": [
+                            "02-42-0C-B3-7C-90",
+                            "02-42-42-6B-5C-4C",
+                            "02-42-4D-0D-5C-2E",
+                            "02-42-B8-6B-5B-E2",
+                            "02-42-E8-01-A8-42",
+                            "2C-F0-5D-68-0B-80",
+                            "AC-12-03-03-A0-5C"
+                        ],
+                        "os": {
+                            "codename": "noble",
+                            "platform": "ubuntu",
+                            "family": "debian",
+                            "version": "24.04.1 LTS (Noble Numbat)",
+                            "name": "Ubuntu",
+                            "type": "linux",
+                            "kernel": "6.8.0-52-generic"
+                        },
+                        "name": "siddharth312-gf65-thin-9sd",
+                        "hostname": "siddharth312-GF65-Thin-9SD",
+                        "containerized": false,
+                        "architecture": "x86_64"
+                    },
+                    "agent": {
+                        "name": "siddharth312-GF65-Thin-9SD",
+                        "type": "filebeat",
+                        "ephemeral_id": "f165e64d-523d-41c3-9858-c6860c625b06",
+                        "version": "8.17.1",
+                        "id": "be99e88c-0161-4712-a2ec-982ec7455be8"
+                    },
+                    "message": "2024-09-25 00:32:13,478 - main.py[DEBUG]: No kernel command line url found.",
+                    "log": {
+                        "file": {
+                            "path": "/var/log/cloud-init.log"
+                        },
+                        "offset": 217
+                    },
+                    "tags": [
+                        "beats_input_codec_plain_applied",
+                        "_grokparsefailure"
+                    ],
+                    "@timestamp": "2025-02-14T05:53:16.700Z",
+                    "ecs": {
+                        "version": "8.0.0"
+                    },
+                    "@version": "1"
+                }
+            },
+            {
+                "_index": "logs-2025.02.14",
+                "_id": "tjIEA5UBB2ohBGEfwLfT",
+                "_score": 1.0,
+                "_source": {
+                    "input": {
+                        "type": "log"
+                    },
+                    "event": {
+                        "original": "2025-02-11T19:40:40.737262+05:30 siddharth312-GF65-Thin-9SD kernel: Initializing XFRM netlink socket"
+                    },
+                    "host": {
+                        "id": "9a51eb060b85489191cab21bfaeaa54f",
+                        "ip": [
+                            "192.168.43.7",
+                            "fe80::fb61:9187:4263:bafc",
+                            "172.19.0.1",
+                            "172.20.0.1",
+                            "172.18.0.1",
+                            "192.168.49.1",
+                            "172.17.0.1"
+                        ],
+                        "mac": [
+                            "02-42-0C-B3-7C-90",
+                            "02-42-42-6B-5C-4C",
+                            "02-42-4D-0D-5C-2E",
+                            "02-42-B8-6B-5B-E2",
+                            "02-42-E8-01-A8-42",
+                            "2C-F0-5D-68-0B-80",
+                            "AC-12-03-03-A0-5C"
+                        ],
+                        "os": {
+                            "codename": "noble",
+                            "platform": "ubuntu",
+                            "family": "debian",
+                            "version": "24.04.1 LTS (Noble Numbat)",
+                            "name": "Ubuntu",
+                            "type": "linux",
+                            "kernel": "6.8.0-52-generic"
+                        },
+                        "name": "siddharth312-gf65-thin-9sd",
+                        "hostname": "siddharth312-GF65-Thin-9SD",
+                        "containerized": false,
+                        "architecture": "x86_64"
+                    },
+                    "agent": {
+                        "name": "siddharth312-GF65-Thin-9SD",
+                        "type": "filebeat",
+                        "ephemeral_id": "f165e64d-523d-41c3-9858-c6860c625b06",
+                        "version": "8.17.1",
+                        "id": "be99e88c-0161-4712-a2ec-982ec7455be8"
+                    },
+                    "message": "2025-02-11T19:40:40.737262+05:30 siddharth312-GF65-Thin-9SD kernel: Initializing XFRM netlink socket",
+                    "log": {
+                        "file": {
+                            "path": "/var/log/kern.log"
+                        },
+                        "offset": 325
+                    },
+                    "tags": [
+                        "beats_input_codec_plain_applied",
+                        "_grokparsefailure"
+                    ],
+                    "@timestamp": "2025-02-14T05:53:16.701Z",
+                    "ecs": {
+                        "version": "8.0.0"
+                    },
+                    "@version": "1"
+                }
+            },
+            {
+                "_index": "logs-2025.02.14",
+                "_id": "tzIEA5UBB2ohBGEfwLfT",
+                "_score": 1.0,
+                "_source": {
+                    "input": {
+                        "type": "log"
+                    },
+                    "event": {
+                        "original": "2025-02-11T19:40:41.461444+05:30 siddharth312-GF65-Thin-9SD kernel: br-3b0cc0b1a12f: port 1(vethc64768d) entered disabled state"
+                    },
+                    "host": {
+                        "id": "9a51eb060b85489191cab21bfaeaa54f",
+                        "ip": [
+                            "192.168.43.7",
+                            "fe80::fb61:9187:4263:bafc",
+                            "172.19.0.1",
+                            "172.20.0.1",
+                            "172.18.0.1",
+                            "192.168.49.1",
+                            "172.17.0.1"
+                        ],
+                        "mac": [
+                            "02-42-0C-B3-7C-90",
+                            "02-42-42-6B-5C-4C",
+                            "02-42-4D-0D-5C-2E",
+                            "02-42-B8-6B-5B-E2",
+                            "02-42-E8-01-A8-42",
+                            "2C-F0-5D-68-0B-80",
+                            "AC-12-03-03-A0-5C"
+                        ],
+                        "os": {
+                            "codename": "noble",
+                            "kernel": "6.8.0-52-generic",
+                            "family": "debian",
+                            "version": "24.04.1 LTS (Noble Numbat)",
+                            "name": "Ubuntu",
+                            "type": "linux",
+                            "platform": "ubuntu"
+                        },
+                        "name": "siddharth312-gf65-thin-9sd",
+                        "hostname": "siddharth312-GF65-Thin-9SD",
+                        "containerized": false,
+                        "architecture": "x86_64"
+                    },
+                    "agent": {
+                        "name": "siddharth312-GF65-Thin-9SD",
+                        "type": "filebeat",
+                        "ephemeral_id": "f165e64d-523d-41c3-9858-c6860c625b06",
+                        "version": "8.17.1",
+                        "id": "be99e88c-0161-4712-a2ec-982ec7455be8"
+                    },
+                    "message": "2025-02-11T19:40:41.461444+05:30 siddharth312-GF65-Thin-9SD kernel: br-3b0cc0b1a12f: port 1(vethc64768d) entered disabled state",
+                    "log": {
+                        "file": {
+                            "path": "/var/log/kern.log"
+                        },
+                        "offset": 755
+                    },
+                    "tags": [
+                        "beats_input_codec_plain_applied",
+                        "_grokparsefailure"
+                    ],
+                    "@timestamp": "2025-02-14T05:53:16.703Z",
+                    "ecs": {
+                        "version": "8.0.0"
+                    },
+                    "@version": "1"
+                }
+            },
+            {
+                "_index": "logs-2025.02.14",
+                "_id": "uDIEA5UBB2ohBGEfwLfT",
+                "_score": 1.0,
+                "_source": {
+                    "input": {
+                        "type": "log"
+                    },
+                    "event": {
+                        "original": "2024-09-25 00:32:13,485 - util.py[DEBUG]: Reading from /var/lib/cloud/instance/obj.pkl (quiet=False)"
+                    },
+                    "host": {
+                        "architecture": "x86_64",
+                        "ip": [
+                            "192.168.43.7",
+                            "fe80::fb61:9187:4263:bafc",
+                            "172.19.0.1",
+                            "172.20.0.1",
+                            "172.18.0.1",
+                            "192.168.49.1",
+                            "172.17.0.1"
+                        ],
+                        "mac": [
+                            "02-42-0C-B3-7C-90",
+                            "02-42-42-6B-5C-4C",
+                            "02-42-4D-0D-5C-2E",
+                            "02-42-B8-6B-5B-E2",
+                            "02-42-E8-01-A8-42",
+                            "2C-F0-5D-68-0B-80",
+                            "AC-12-03-03-A0-5C"
+                        ],
+                        "os": {
+                            "codename": "noble",
+                            "platform": "ubuntu",
+                            "family": "debian",
+                            "version": "24.04.1 LTS (Noble Numbat)",
+                            "name": "Ubuntu",
+                            "type": "linux",
+                            "kernel": "6.8.0-52-generic"
+                        },
+                        "name": "siddharth312-gf65-thin-9sd",
+                        "hostname": "siddharth312-GF65-Thin-9SD",
+                        "containerized": false,
+                        "id": "9a51eb060b85489191cab21bfaeaa54f"
+                    },
+                    "agent": {
+                        "name": "siddharth312-GF65-Thin-9SD",
+                        "type": "filebeat",
+                        "ephemeral_id": "f165e64d-523d-41c3-9858-c6860c625b06",
+                        "version": "8.17.1",
+                        "id": "be99e88c-0161-4712-a2ec-982ec7455be8"
+                    },
+                    "message": "2024-09-25 00:32:13,485 - util.py[DEBUG]: Reading from /var/lib/cloud/instance/obj.pkl (quiet=False)",
+                    "log": {
+                        "file": {
+                            "path": "/var/log/cloud-init.log"
+                        },
+                        "offset": 872
+                    },
+                    "tags": [
+                        "beats_input_codec_plain_applied",
+                        "_grokparsefailure"
+                    ],
+                    "@timestamp": "2025-02-14T05:53:16.703Z",
+                    "ecs": {
+                        "version": "8.0.0"
+                    },
+                    "@version": "1"
+                }
+            },
+            {
+                "_index": "logs-2025.02.14",
+                "_id": "3jIEA5UBB2ohBGEfwLXR",
+                "_score": 1.0,
+                "_source": {
+                    "input": {
+                        "type": "log"
+                    },
+                    "event": {
+                        "original": "gpgv: Good signature from \"Ubuntu Archive Automatic Signing Key (2018) <ftpmaster@ubuntu.com>\""
+                    },
+                    "host": {
+                        "architecture": "x86_64",
+                        "ip": [
+                            "192.168.43.7",
+                            "fe80::fb61:9187:4263:bafc",
+                            "172.19.0.1",
+                            "172.20.0.1",
+                            "172.18.0.1",
+                            "192.168.49.1",
+                            "172.17.0.1"
+                        ],
+                        "mac": [
+                            "02-42-0C-B3-7C-90",
+                            "02-42-42-6B-5C-4C",
+                            "02-42-4D-0D-5C-2E",
+                            "02-42-B8-6B-5B-E2",
+                            "02-42-E8-01-A8-42",
+                            "2C-F0-5D-68-0B-80",
+                            "AC-12-03-03-A0-5C"
+                        ],
+                        "os": {
+                            "codename": "noble",
+                            "kernel": "6.8.0-52-generic",
+                            "family": "debian",
+                            "version": "24.04.1 LTS (Noble Numbat)",
+                            "name": "Ubuntu",
+                            "type": "linux",
+                            "platform": "ubuntu"
+                        },
+                        "name": "siddharth312-gf65-thin-9sd",
+                        "hostname": "siddharth312-GF65-Thin-9SD",
+                        "containerized": false,
+                        "id": "9a51eb060b85489191cab21bfaeaa54f"
+                    },
+                    "agent": {
+                        "name": "siddharth312-GF65-Thin-9SD",
+                        "type": "filebeat",
+                        "ephemeral_id": "f165e64d-523d-41c3-9858-c6860c625b06",
+                        "version": "8.17.1",
+                        "id": "be99e88c-0161-4712-a2ec-982ec7455be8"
+                    },
+                    "message": "gpgv: Good signature from \"Ubuntu Archive Automatic Signing Key (2018) <ftpmaster@ubuntu.com>\"",
+                    "log": {
+                        "file": {
+                            "path": "/var/log/bootstrap.log"
+                        },
+                        "offset": 318
+                    },
+                    "tags": [
+                        "beats_input_codec_plain_applied",
+                        "_grokparsefailure"
+                    ],
+                    "@timestamp": "2025-02-14T05:53:16.705Z",
+                    "ecs": {
+                        "version": "8.0.0"
+                    },
+                    "@version": "1"
+                }
+            },
+            {
+                "_index": "logs-2025.02.14",
+                "_id": "ujIEA5UBB2ohBGEfwLfT",
+                "_score": 1.0,
+                "_source": {
+                    "input": {
+                        "type": "log"
+                    },
+                    "event": {
+                        "original": "2024-08-27 15:37:04 URL:http://ftpmaster.internal/ubuntu/pool/main/c/console-setup/console-setup_1.226ubuntu1_all.deb [109854/109854] -> \"/build/chroot//var/cache/apt/archives/partial/console-setup_1.226ubuntu1_all.deb\" [1]"
+                    },
+                    "host": {
+                        "architecture": "x86_64",
+                        "ip": [
+                            "192.168.43.7",
+                            "fe80::fb61:9187:4263:bafc",
+                            "172.19.0.1",
+                            "172.20.0.1",
+                            "172.18.0.1",
+                            "192.168.49.1",
+                            "172.17.0.1"
+                        ],
+                        "mac": [
+                            "02-42-0C-B3-7C-90",
+                            "02-42-42-6B-5C-4C",
+                            "02-42-4D-0D-5C-2E",
+                            "02-42-B8-6B-5B-E2",
+                            "02-42-E8-01-A8-42",
+                            "2C-F0-5D-68-0B-80",
+                            "AC-12-03-03-A0-5C"
+                        ],
+                        "os": {
+                            "codename": "noble",
+                            "platform": "ubuntu",
+                            "family": "debian",
+                            "version": "24.04.1 LTS (Noble Numbat)",
+                            "name": "Ubuntu",
+                            "type": "linux",
+                            "kernel": "6.8.0-52-generic"
+                        },
+                        "name": "siddharth312-gf65-thin-9sd",
+                        "hostname": "siddharth312-GF65-Thin-9SD",
+                        "containerized": false,
+                        "id": "9a51eb060b85489191cab21bfaeaa54f"
+                    },
+                    "agent": {
+                        "name": "siddharth312-GF65-Thin-9SD",
+                        "type": "filebeat",
+                        "ephemeral_id": "f165e64d-523d-41c3-9858-c6860c625b06",
+                        "version": "8.17.1",
+                        "id": "be99e88c-0161-4712-a2ec-982ec7455be8"
+                    },
+                    "message": "2024-08-27 15:37:04 URL:http://ftpmaster.internal/ubuntu/pool/main/c/console-setup/console-setup_1.226ubuntu1_all.deb [109854/109854] -> \"/build/chroot//var/cache/apt/archives/partial/console-setup_1.226ubuntu1_all.deb\" [1]",
+                    "log": {
+                        "file": {
+                            "path": "/var/log/bootstrap.log"
+                        },
+                        "offset": 2724
+                    },
+                    "tags": [
+                        "beats_input_codec_plain_applied",
+                        "_grokparsefailure"
+                    ],
+                    "@timestamp": "2025-02-14T05:53:16.705Z",
+                    "ecs": {
+                        "version": "8.0.0"
+                    },
+                    "@version": "1"
+                }
+            },
+            {
+                "_index": "logs-2025.02.14",
+                "_id": "RjIEA5UBB2ohBGEfwLXQ",
+                "_score": 1.0,
+                "_source": {
+                    "input": {
+                        "type": "log"
+                    },
+                    "event": {
+                        "original": "\t/usr/share/fonts/cmap/adobe-japan1"
+                    },
+                    "host": {
+                        "id": "9a51eb060b85489191cab21bfaeaa54f",
+                        "ip": [
+                            "192.168.43.7",
+                            "fe80::fb61:9187:4263:bafc",
+                            "172.19.0.1",
+                            "172.20.0.1",
+                            "172.18.0.1",
+                            "192.168.49.1",
+                            "172.17.0.1"
+                        ],
+                        "mac": [
+                            "02-42-0C-B3-7C-90",
+                            "02-42-42-6B-5C-4C",
+                            "02-42-4D-0D-5C-2E",
+                            "02-42-B8-6B-5B-E2",
+                            "02-42-E8-01-A8-42",
+                            "2C-F0-5D-68-0B-80",
+                            "AC-12-03-03-A0-5C"
+                        ],
+                        "os": {
+                            "codename": "noble",
+                            "platform": "ubuntu",
+                            "family": "debian",
+                            "version": "24.04.1 LTS (Noble Numbat)",
+                            "name": "Ubuntu",
+                            "type": "linux",
+                            "kernel": "6.8.0-52-generic"
+                        },
+                        "name": "siddharth312-gf65-thin-9sd",
+                        "hostname": "siddharth312-GF65-Thin-9SD",
+                        "containerized": false,
+                        "architecture": "x86_64"
+                    },
+                    "agent": {
+                        "name": "siddharth312-GF65-Thin-9SD",
+                        "type": "filebeat",
+                        "ephemeral_id": "f165e64d-523d-41c3-9858-c6860c625b06",
+                        "version": "8.17.1",
+                        "id": "be99e88c-0161-4712-a2ec-982ec7455be8"
+                    },
+                    "message": "\t/usr/share/fonts/cmap/adobe-japan1",
+                    "log": {
+                        "file": {
+                            "path": "/var/log/fontconfig.log"
+                        },
+                        "offset": 387
+                    },
+                    "tags": [
+                        "beats_input_codec_plain_applied",
+                        "_grokparsefailure"
+                    ],
+                    "@timestamp": "2025-02-14T05:53:16.703Z",
+                    "ecs": {
+                        "version": "8.0.0"
+                    },
+                    "@version": "1"
+                }
+            },
+            {
+                "_index": "logs-2025.02.14",
+                "_id": "SjIEA5UBB2ohBGEfwLXQ",
+                "_score": 1.0,
+                "_ignored": [
+                    "event.original.keyword",
+                    "message.keyword"
+                ],
+                "_source": {
+                    "input": {
+                        "type": "log"
+                    },
+                    "event": {
+                        "original": "2024-08-27 15:37:03 URL:http://ftpmaster.internal/ubuntu/dists/noble/restricted/binary-amd64/by-hash/SHA256/aa3f9520f4e46cdcd610c7f0ce9450cda430f20085b028845e95122e9d61680c [93924/93924] -> \"/build/chroot/var/lib/apt/lists/partial/ftpmaster.internal_ubuntu_dists_noble_restricted_binary-amd64_Packages.xz\" [1]"
+                    },
+                    "host": {
+                        "architecture": "x86_64",
+                        "ip": [
+                            "192.168.43.7",
+                            "fe80::fb61:9187:4263:bafc",
+                            "172.19.0.1",
+                            "172.20.0.1",
+                            "172.18.0.1",
+                            "192.168.49.1",
+                            "172.17.0.1"
+                        ],
+                        "mac": [
+                            "02-42-0C-B3-7C-90",
+                            "02-42-42-6B-5C-4C",
+                            "02-42-4D-0D-5C-2E",
+                            "02-42-B8-6B-5B-E2",
+                            "02-42-E8-01-A8-42",
+                            "2C-F0-5D-68-0B-80",
+                            "AC-12-03-03-A0-5C"
+                        ],
+                        "os": {
+                            "codename": "noble",
+                            "kernel": "6.8.0-52-generic",
+                            "family": "debian",
+                            "version": "24.04.1 LTS (Noble Numbat)",
+                            "name": "Ubuntu",
+                            "type": "linux",
+                            "platform": "ubuntu"
+                        },
+                        "name": "siddharth312-gf65-thin-9sd",
+                        "hostname": "siddharth312-GF65-Thin-9SD",
+                        "containerized": false,
+                        "id": "9a51eb060b85489191cab21bfaeaa54f"
+                    },
+                    "agent": {
+                        "name": "siddharth312-GF65-Thin-9SD",
+                        "type": "filebeat",
+                        "ephemeral_id": "f165e64d-523d-41c3-9858-c6860c625b06",
+                        "version": "8.17.1",
+                        "id": "be99e88c-0161-4712-a2ec-982ec7455be8"
+                    },
+                    "message": "2024-08-27 15:37:03 URL:http://ftpmaster.internal/ubuntu/dists/noble/restricted/binary-amd64/by-hash/SHA256/aa3f9520f4e46cdcd610c7f0ce9450cda430f20085b028845e95122e9d61680c [93924/93924] -> \"/build/chroot/var/lib/apt/lists/partial/ftpmaster.internal_ubuntu_dists_noble_restricted_binary-amd64_Packages.xz\" [1]",
+                    "log": {
+                        "file": {
+                            "path": "/var/log/bootstrap.log"
+                        },
+                        "offset": 715
+                    },
+                    "tags": [
+                        "beats_input_codec_plain_applied",
+                        "_grokparsefailure"
+                    ],
+                    "@timestamp": "2025-02-14T05:53:16.705Z",
+                    "ecs": {
+                        "version": "8.0.0"
+                    },
+                    "@version": "1"
+                }
+            },
+            {
+                "_index": "logs-2025.02.14",
+                "_id": "TjIEA5UBB2ohBGEfwLXQ",
+                "_score": 1.0,
+                "_source": {
+                    "input": {
+                        "type": "log"
+                    },
+                    "event": {
+                        "original": "2024-08-27 15:37:04 URL:http://ftpmaster.internal/ubuntu/pool/main/c/ca-certificates/ca-certificates_20240203_all.deb [159378/159378] -> \"/build/chroot//var/cache/apt/archives/partial/ca-certificates_20240203_all.deb\" [1]"
+                    },
+                    "host": {
+                        "id": "9a51eb060b85489191cab21bfaeaa54f",
+                        "ip": [
+                            "192.168.43.7",
+                            "fe80::fb61:9187:4263:bafc",
+                            "172.19.0.1",
+                            "172.20.0.1",
+                            "172.18.0.1",
+                            "192.168.49.1",
+                            "172.17.0.1"
+                        ],
+                        "mac": [
+                            "02-42-0C-B3-7C-90",
+                            "02-42-42-6B-5C-4C",
+                            "02-42-4D-0D-5C-2E",
+                            "02-42-B8-6B-5B-E2",
+                            "02-42-E8-01-A8-42",
+                            "2C-F0-5D-68-0B-80",
+                            "AC-12-03-03-A0-5C"
+                        ],
+                        "os": {
+                            "codename": "noble",
+                            "platform": "ubuntu",
+                            "family": "debian",
+                            "version": "24.04.1 LTS (Noble Numbat)",
+                            "name": "Ubuntu",
+                            "type": "linux",
+                            "kernel": "6.8.0-52-generic"
+                        },
+                        "name": "siddharth312-gf65-thin-9sd",
+                        "hostname": "siddharth312-GF65-Thin-9SD",
+                        "containerized": false,
+                        "architecture": "x86_64"
+                    },
+                    "agent": {
+                        "name": "siddharth312-GF65-Thin-9SD",
+                        "type": "filebeat",
+                        "ephemeral_id": "f165e64d-523d-41c3-9858-c6860c625b06",
+                        "version": "8.17.1",
+                        "id": "be99e88c-0161-4712-a2ec-982ec7455be8"
+                    },
+                    "message": "2024-08-27 15:37:04 URL:http://ftpmaster.internal/ubuntu/pool/main/c/ca-certificates/ca-certificates_20240203_all.deb [159378/159378] -> \"/build/chroot//var/cache/apt/archives/partial/ca-certificates_20240203_all.deb\" [1]",
+                    "log": {
+                        "file": {
+                            "path": "/var/log/bootstrap.log"
+                        },
+                        "offset": 2502
+                    },
+                    "tags": [
+                        "beats_input_codec_plain_applied",
+                        "_grokparsefailure"
+                    ],
+                    "@timestamp": "2025-02-14T05:53:16.705Z",
+                    "ecs": {
+                        "version": "8.0.0"
+                    },
+                    "@version": "1"
+                }
+            }
+        ]
+    }
+}
