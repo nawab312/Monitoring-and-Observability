@@ -1,0 +1,85 @@
+- name: Install Prometheus & Grafana on Ubuntu
+  hosts: localhost
+  become: yes
+  tasks:
+
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install required packages
+      apt:
+        name:
+          - wget
+          - tar
+          - curl
+          - software-properties-common
+          - apt-transport-https
+          - gnupg
+        state: present
+
+    - name: Create Prometheus directory
+      file:
+        path: /opt/prometheus
+        state: directory
+        mode: '0755'
+
+    - name: Download and extract Prometheus
+      shell: |
+        cd /opt
+        wget https://github.com/prometheus/prometheus/releases/download/v2.53.3/prometheus-2.53.3.linux-amd64.tar.gz
+        tar -xvf prometheus-2.53.3.linux-amd64.tar.gz
+        mv prometheus-2.53.3.linux-amd64/* /opt/prometheus/
+        rm -rf prometheus-2.53.3.linux-amd64 prometheus-2.53.3.linux-amd64.tar.gz
+
+    - name: Create Prometheus systemd service file
+      copy:
+        dest: /etc/systemd/system/prometheus.service
+        content: |
+          [Unit]
+          Description=Prometheus
+          After=network.target
+
+          [Service]
+          User=root
+          ExecStart=/opt/prometheus/prometheus --config.file=/opt/prometheus/prometheus.yml
+          Restart=always
+
+          [Install]
+          WantedBy=multi-user.target
+
+    - name: Configure Prometheus
+      copy:
+        dest: /opt/prometheus/prometheus.yml
+        content: |
+          global:
+            scrape_interval: 10s
+          scrape_configs:
+            - job_name: 'prometheus'
+              static_configs:
+                - targets: ['localhost:9090']
+        mode: '0644'
+
+    - name: Reload systemd and enable Prometheus service
+      shell: |
+        sudo systemctl daemon-reload
+        sudo systemctl enable prometheus
+        sudo systemctl restart prometheus
+
+    - name: Add Grafana APT repository
+      shell: |
+        sudo mkdir -p /etc/apt/keyrings
+        curl -fsSL https://packages.grafana.com/gpg.key | sudo tee /etc/apt/keyrings/grafana.key
+        echo "deb [signed-by=/etc/apt/keyrings/grafana.key] https://packages.grafana.com/oss/deb stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
+        sudo apt update
+
+    - name: Install Grafana
+      apt:
+        name: grafana
+        state: present
+
+    - name: Enable and start Grafana service
+      systemd:
+        name: grafana-server
+        enabled: yes
+        state: started
