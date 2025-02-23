@@ -8,4 +8,6 @@
 terraform init
 terraform apply --auto-approve
 ```
+### Prometheus Targets ###
+```<EC2_1_PUBLIC_IP>:9090/targets```
 ![Prometheus Targets](https://github.com/nawab312/Monitoring-and-Observability/blob/main/AWS_Prometheus_Grafana/Project1/Images/Prometheus_Targets.png)
