@@ -8,6 +8,14 @@
 terraform init
 terraform apply --auto-approve
 ```
+### Changes According to Your Setup ###
+Here Instead of `172.31.89.143` use Private IP of your EC2_2 Instance
+```bash
+- job_name: 'node_exporter'
+  static_configs:
+    - targets: ['172.31.89.143:9100']
+```
+
 ### Prometheus Targets ###
 ```<EC2_1_PUBLIC_IP>:9090/targets```
 
