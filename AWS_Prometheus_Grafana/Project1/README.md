@@ -16,8 +16,16 @@ terraform apply --auto-approve
 ## Grafana ##
 - Access Grafana: ```http://<EC2-1-Public-IP>:3000``` (Default login: admin/admin)
 
-### Add a new Prometheus data source ###
+#### Add a new Prometheus data source ####
 `http://loaclhost:9090`: Because Prometheus and Grafana are on same Server
 Save and Test
 
 ![Prometheus Data Source](https://github.com/nawab312/Monitoring-and-Observability/blob/main/AWS_Prometheus_Grafana/Project1/Images/Grafana_Add_DataSource.png)
+
+#### Import Node Exporter Dashboard in Grafana ####
+- Go to Dashboards → New → Import.
+- Enter Dashboard ID: 1860 and click Load.
+- Select Prometheus as the data source.
+- Click Import.
+
+![Grafana DashBoard](https://github.com/nawab312/Monitoring-and-Observability/blob/main/AWS_Prometheus_Grafana/Project1/Images/Grafana_Dashboard.png)
