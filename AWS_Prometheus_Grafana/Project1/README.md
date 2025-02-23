@@ -25,7 +25,7 @@ In `setup_prometheus.yml` Here Instead of `172.31.89.143` use Private IP of your
 - Access Grafana: ```http://<EC2-1-Public-IP>:3000``` (Default login: admin/admin)
 
 #### Add a new Prometheus data source ####
-`http://loaclhost:9090`: Because Prometheus and Grafana are on same Server
+`http://loaclhost:9090`: Because Prometheus and Grafana are on same Server. <br>
 Save and Test
 
 ![Prometheus Data Source](https://github.com/nawab312/Monitoring-and-Observability/blob/main/AWS_Prometheus_Grafana/Project1/Images/Grafana_Add_DataSource.png)
