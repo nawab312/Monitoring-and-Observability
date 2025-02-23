@@ -20,4 +20,4 @@ terraform apply --auto-approve
 `http://loaclhost:9090`: Because Prometheus and Grafana are on same Server
 Save and Test
 
-![Prometheus Data Source]([https://github.com/nawab312/Monitoring-and-Observability/blob/main/AWS_Prometheus_Grafana/Project1/Images/Prometheus_Targets.png](https://github.com/nawab312/Monitoring-and-Observability/blob/main/AWS_Prometheus_Grafana/Project1/Images/Grafana_Add_DataSource.png))
+![Prometheus Data Source](https://github.com/nawab312/Monitoring-and-Observability/blob/main/AWS_Prometheus_Grafana/Project1/Images/Grafana_Add_DataSource.png)
