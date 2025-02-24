@@ -43,6 +43,31 @@ A distributed search and analytics engine. Stores data in **JSON format** and al
 # Fields: title, author, published_year, genre
 ```
 
+Start ElasticSeacrh
+```bash
+~/ELK_Stack/elasticsearch-8.17.1/bin$ ./elasticsearch
+```
+```bash
+$ curl -X GET "localhost:9200/"
+{
+  "name" : "node-1",
+  "cluster_name" : "my-cluster",
+  "cluster_uuid" : "u4KVwP98RZ-QzPykdeVExg",
+  "version" : {
+    "number" : "8.17.1",
+    "build_flavor" : "default",
+    "build_type" : "tar",
+    "build_hash" : "d4b391d925c31d262eb767b8b2db8f398103f909",
+    "build_date" : "2025-01-10T10:08:26.972230187Z",
+    "build_snapshot" : false,
+    "lucene_version" : "9.12.0",
+    "minimum_wire_compatibility_version" : "7.17.0",
+    "minimum_index_compatibility_version" : "7.0.0"
+  },
+  "tagline" : "You Know, for Search"
+}
+```
+
 
 ## Logstash ##
 An open-source server-side data processing pipeline that ingests, transforms, and forwards data to Elasticsearch, where it can be stored and queried.
