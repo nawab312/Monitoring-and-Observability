@@ -23,6 +23,10 @@ A distributed search and analytics engine. Stores data in **JSON format** and al
 - Fault Tolerance: If a node containing a primary shard goes down, the replica on another node can be promoted to a primary, ensuring data is not lost.
 - Read Scalability: Replicas can be queried in parallel with primary shards. This means that having more replicas can improve read performance by spreading the query load across multiple nodes.
 
+**Index:** A collection of documents with similar characteristics. Comparable to a database table in relational databases
+**Document:** A single piece of data stored in JSON format
+**Field:** Key-value pairs within a document.
+
 ## Logstash ##
 An open-source server-side data processing pipeline that ingests, transforms, and forwards data to Elasticsearch, where it can be stored and queried.
 
