@@ -1,3 +1,16 @@
+## ElasticSearch ##
+A distributed search and analytics engine. Stores data in **JSON format** and allows full-text search
+![ElasticSeach](https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Images/ElasticSearch.png)
+
+- Cluster: A collection of one or more nodes working together.
+- Node: A single server in the Elasticsearch cluster. Types of Nodes
+  - Master Node: Manages cluster-wide operations (e.g., creating indices, adding/removing nodes).
+  - Data Node: Stores data and handles CRUD operations and search queries
+  - Client Node: Acts as a load balancer for coordinating requests.
+- Shard: basic units of data storage in Elasticsearch, and they are used to distribute data across the nodes in an Elasticsearch cluster. When an index is created, it is divided into smaller parts called shards.
+  - Primary Shard: A primary shard is where the actual data is stored. Elasticsearch splits data into primary shards during the indexing process.
+  - Sharding for Scalability: By dividing data into shards, Elasticsearch can distribute the load and data across multiple nodes in a cluster, making it scalable. This allows Elasticsearch to handle large volumes of data efficiently, as each shard can be stored and queried independently.  
+
 ## Logstash ##
 An open-source server-side data processing pipeline that ingests, transforms, and forwards data to Elasticsearch, where it can be stored and queried.
 
