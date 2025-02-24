@@ -99,3 +99,45 @@ curl -X GET "localhost:9200/library/_search?pretty"
   }
 }
 ```
+#### Match Queries ####
+```bash
+curl -X GET "localhost:9200/library/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match": {
+      "title": "gatsby"
+    }
+  }
+}
+'
+{
+  "took" : 24,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 1,
+      "relation" : "eq"
+    },
+    "max_score" : 0.5754429,
+    "hits" : [
+      {
+        "_index" : "library",
+        "_id" : "1",
+        "_score" : 0.5754429,
+        "_source" : {
+          "title" : "The Great Gatsby",
+          "author" : "F. Scott Fitzgerald",
+          "published_year" : 1925,
+          "genre" : "Fiction"
+        }
+      }
+    ]
+  }
+}
+```
