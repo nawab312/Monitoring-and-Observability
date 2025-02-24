@@ -67,6 +67,18 @@ $ curl -X GET "localhost:9200/"
   "tagline" : "You Know, for Search"
 }
 ```
+#### Match Queries ####
+```bash
+curl -X GET "localhost:9200/library/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match": {
+      "title": "gatsby"
+    }
+  }
+}
+```
+
 `_search` endpoint is used to search for documents within an index (or across multiple indices). 
 ```bash
 curl -X GET "localhost:9200/library/_search?pretty"
