@@ -31,6 +31,19 @@ A distributed search and analytics engine. Stores data in **JSON format** and al
 
 **Field:** Key-value pairs within a document.
 
+```bash
+# Index: Library
+# Document:
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald",
+  "published_year": 1925,
+  "genre": "Fiction"
+}
+# Fields: title, author, published_year, genre
+```
+
+
 ## Logstash ##
 An open-source server-side data processing pipeline that ingests, transforms, and forwards data to Elasticsearch, where it can be stored and queried.
 
