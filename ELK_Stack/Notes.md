@@ -19,7 +19,7 @@ A distributed search and analytics engine. Stores data in **JSON format** and al
 
 **Replication** Elasticsearch allows you to specify the number of replica shards for each primary shard when creating an index. By default, an index has 1 replica (meaning there is one copy of each primary shard).
 
-How Replicas Work:
+#### How Replicas Work ####
 - Fault Tolerance: If a node containing a primary shard goes down, the replica on another node can be promoted to a primary, ensuring data is not lost.
 - Read Scalability: Replicas can be queried in parallel with primary shards. This means that having more replicas can improve read performance by spreading the query load across multiple nodes.
 
