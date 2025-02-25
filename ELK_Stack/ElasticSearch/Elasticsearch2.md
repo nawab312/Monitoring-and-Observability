@@ -64,4 +64,45 @@ curl -X POST "localhost:9200/products/_doc/2?pretty" -H 'Content-Type: applicati
 }
 ```
 
+Searching Example
+```bash
+curl -X GET "localhost:9200/products/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "term": {
+        "product_code": "ABC123"
+    }
+  }
+}
+'
+{
+  "took" : 27,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 1,
+      "relation" : "eq"
+    },
+    "max_score" : 0.6931471,
+    "hits" : [
+      {
+        "_index" : "products",
+        "_id" : "1",
+        "_score" : 0.6931471,
+        "_source" : {
+          "product_code" : "ABC123",
+          "product_description" : "This is my product"
+        }
+      }
+    ]
+  }
+}
+```
+
 
