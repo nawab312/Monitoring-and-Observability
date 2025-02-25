@@ -65,6 +65,7 @@ curl -X POST "localhost:9200/products/_doc/2?pretty" -H 'Content-Type: applicati
 ```
 
 Searching Example
+
 **term**
 ```bash
 curl -X GET "localhost:9200/products/_search?pretty" -H 'Content-Type: application/json' -d'
