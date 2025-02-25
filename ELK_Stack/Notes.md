@@ -68,8 +68,16 @@ $ curl -X GET "localhost:9200/"
 }
 ```
 
-`_search` endpoint is used to search for documents within an index (or across multiple indices). 
+`_search` endpoint is used to search for documents within an index (or across multiple indices).
+
 Get all documents from an Elasticsearch index, use the `_search` API with the `match_all` query
+```bash
+{
+    "query": {
+        "match_all": {}
+    }
+}
+```
 
 #### Querying with Elastic Search ####
 - **match**: The most commonly used query for full-text search. It analyzes the input query and compares it to the text fields.
