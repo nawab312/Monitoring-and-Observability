@@ -46,3 +46,9 @@ elasticsearch: http://localhost:9200...
 
 `journalctl -u filebeat -f` is used to display the real-time log output for the filebeat service.
 
+**Filebeat Harvesters** 
+After the configuration is set, Filebeat starts "harvesters" for each log file path defined in the configuration. A harvester is a lightweight worker that reads the logs from a file line-by-line.
+- Each file being monitored is picked up by a separate harvester.
+- Harvesters track the position of the log files, so only new logs are processed.
+As Filebeat reads each log line, it processes the log entry and adds metadata such as the log file path, timestamp, and other attributes
+
