@@ -116,11 +116,11 @@ Get all documents from an Elasticsearch index, use the `_search` API with the `m
 
 **Example 1:** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/ElasticSearch/ElasticSearch1.md
 
-**Example 2:** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/ElasticSearch/Elasticsearch2.md
-
 #### Keyword and Text data type in Elasticsearch ####
 - keyword: Used for exact matching where the string is stored as-is, without any analysis or tokenization. It is typically used for fields that require precise matching, like IDs, emails, tags, product codes, and status values.
 - Text: Used for full-text search where the string is analyzed, tokenized, and indexed by individual terms (words). It is meant for fields containing descriptive content, such as product descriptions, blog articles, and comments.
+
+**Example 2:** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/ElasticSearch/Elasticsearch2.md
 
 
 ## Logstash ##
