@@ -100,6 +100,60 @@ curl -X GET "localhost:9200/library/_search?pretty"
 }
 ```
 #### Match Queries ####
+
+**match_all**
+```bash
+curl -X GET "localhost:9200/library/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match_all": {}
+  }
+}
+'
+{
+  "took" : 130,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 2,
+      "relation" : "eq"
+    },
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "library",
+        "_id" : "1",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "The Great Gatsby",
+          "author" : "F. Scott Fitzgerald",
+          "published_year" : 1925,
+          "genre" : "Fiction"
+        }
+      },
+      {
+        "_index" : "library",
+        "_id" : "2",
+        "_score" : 1.0,
+        "_source" : {
+          "title" : "1984",
+          "author" : "George Orwell",
+          "published_year" : 1949,
+          "genre" : "Dystopian"
+        }
+      }
+    ]
+  }
+}
+```
+
+**match**
 ```bash
 curl -X GET "localhost:9200/library/_search?pretty" -H 'Content-Type: application/json' -d'
 {
