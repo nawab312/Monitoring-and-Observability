@@ -67,8 +67,8 @@ $ curl -X GET "localhost:9200/"
   "tagline" : "You Know, for Search"
 }
 ```
-
-Delete an Index: `curl -X DELETE "http://localhost:9200/index_name"`
+- Create an Index: `curl -X PUT "localhost:9200/index_name"
+- Delete an Index: `curl -X DELETE "http://localhost:9200/index_name"`
 
 `_search` endpoint is used to search for documents within an index (or across multiple indices).
 
