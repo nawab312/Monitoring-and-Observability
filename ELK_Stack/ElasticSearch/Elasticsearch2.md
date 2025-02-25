@@ -65,6 +65,7 @@ curl -X POST "localhost:9200/products/_doc/2?pretty" -H 'Content-Type: applicati
 ```
 
 Searching Example
+**term**
 ```bash
 curl -X GET "localhost:9200/products/_search?pretty" -H 'Content-Type: application/json' -d'
 {
@@ -95,6 +96,56 @@ curl -X GET "localhost:9200/products/_search?pretty" -H 'Content-Type: applicati
         "_index" : "products",
         "_id" : "1",
         "_score" : 0.6931471,
+        "_source" : {
+          "product_code" : "ABC123",
+          "product_description" : "This is my product"
+        }
+      }
+    ]
+  }
+}
+```
+
+**match**
+```bash
+curl -X GET "localhost:9200/products/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match": {
+        "product_description": "This is her"
+    }
+  }
+}
+'
+{
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 2,
+      "relation" : "eq"
+    },
+    "max_score" : 1.0577903,
+    "hits" : [
+      {
+        "_index" : "products",
+        "_id" : "2",
+        "_score" : 1.0577903,
+        "_source" : {
+          "product_code" : "DEF456",
+          "product_description" : "This is her product"
+        }
+      },
+      {
+        "_index" : "products",
+        "_id" : "1",
+        "_score" : 0.36464313,
         "_source" : {
           "product_code" : "ABC123",
           "product_description" : "This is my product"
