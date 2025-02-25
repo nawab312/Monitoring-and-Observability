@@ -69,6 +69,39 @@ $ curl -X GET "localhost:9200/"
 ```
 
 `_search` endpoint is used to search for documents within an index (or across multiple indices). 
+Get all documents from an Elasticsearch index, use the `_search` API with the `match_all` query
+
+#### Querying with Elastic Search ####
+- **match**: The most commonly used query for full-text search. It analyzes the input query and compares it to the text fields.
+```bash
+{
+    "query": {
+        "match": {
+            "message": "Hello"
+        }
+    }
+}
+```
+- **match_phrase**: Similar to match, but it ensures the words appear exactly in the same order as in the query (useful for phrase searches).
+```bash
+{
+    "query": {
+        "match_phrase": {
+            "message": "Hello Siddharth"
+        }
+    }
+}
+```
+- **match_phrase_prefix**: Similar to match_phrase, but allows for prefix matching of the last word in the phrase.
+```bash
+{
+    "query": {
+        "match_phrase_prefix": {
+            "message": "Hello Sidd"
+        }
+    }
+}
+```
 
 
 **Example 1:** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/ElasticSearch/ElasticSearch1.md
