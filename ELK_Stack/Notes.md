@@ -69,9 +69,7 @@ $ curl -X GET "localhost:9200/"
 ```
 
 `_search` endpoint is used to search for documents within an index (or across multiple indices). 
-```bash
-curl -X GET "localhost:9200/library/_search?pretty"
-```
+
 
 **Example 1:** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/ElasticSearch/ElasticSearch1.md
 
