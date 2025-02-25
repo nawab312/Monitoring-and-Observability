@@ -52,3 +52,9 @@ After the configuration is set, Filebeat starts "harvesters" for each log file p
 - Harvesters track the position of the log files, so only new logs are processed.
 As Filebeat reads each log line, it processes the log entry and adds metadata such as the log file path, timestamp, and other attributes
 
+**Logstash Pipeline**
+- Input: The input plugins specify the source from where Logstash should read data. Examples include reading from files, databases, or network ports
+- Filter: Filters process data to transform, enhance, or extract meaningful information.
+- Output: The output plugins specify where the processed data should be sent. For example, you may send logs to Elasticsearch, files, or even another service.
+
+
