@@ -61,4 +61,6 @@ As Filebeat reads each log line, it processes the log entry and adds metadata su
 
 **Example2** View logs in a file https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Logstash/Example2.md
 
+**Example3** Parsing Apache Logs with GROK https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Logstash/Example3.md
+
 
