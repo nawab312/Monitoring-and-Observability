@@ -22,3 +22,25 @@ filebeat.inputs:
 output.elasticsearch:
   hosts: ["http://localhost:9200"]  # Replace with your Elasticsearch URL
 ```
+
+Command to test Filebeat configuration: `filebeat test config`
+```bash
+filebeat test config
+Config OK
+```
+
+To test the connection to Elasticsearch or Logstash: `filebeat test output`
+```bash
+filebeat test output
+elasticsearch: http://localhost:9200...
+  parse url... OK
+  connection...
+    parse host... OK
+    dns lookup... OK
+    addresses: 127.0.0.1
+    dial up... OK
+  TLS... WARN secure connection disabled
+  talk to server... OK
+  version: 8.17.1
+```
+
