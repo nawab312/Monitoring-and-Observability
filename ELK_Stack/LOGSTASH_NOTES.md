@@ -58,6 +58,7 @@ As Filebeat reads each log line, it processes the log entry and adds metadata su
 - Output: The output plugins specify where the processed data should be sent. For example, you may send logs to Elasticsearch, files, or even another service.
 
 **Example1** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Logstash/Logstash1.md
+
 **Example2** View logs in a file https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Logstash/Example2.md
 
 
