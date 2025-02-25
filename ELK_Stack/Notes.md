@@ -113,6 +113,24 @@ Get all documents from an Elasticsearch index, use the `_search` API with the `m
 }
 ```
 
+#### Mappings ####
+Mappings define how fields are stored and indexed in Elasticsearch. Default Mapping Behavior: When you index data without explicitly defining a mapping, Elasticsearch automatically guesses the field types.
+```bash
+curl -X PUT "localhost:9200/products" -H 'Content-Type: application/json' -d'
+{
+    "mappings": {
+        "properties": {
+            "product_code": {
+                "type": "keyword"
+            },
+            "product_description": {
+                "type": "text"
+            }
+        }
+    }
+}
+'
+```
 
 **Example 1:** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/ElasticSearch/ElasticSearch1.md
 
