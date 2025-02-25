@@ -44,3 +44,5 @@ elasticsearch: http://localhost:9200...
   version: 8.17.1
 ```
 
+`journalctl -u filebeat -f` is used to display the real-time log output for the filebeat service.
+
