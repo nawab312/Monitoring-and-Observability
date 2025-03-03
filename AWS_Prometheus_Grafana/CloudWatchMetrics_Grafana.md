@@ -8,7 +8,7 @@ wget https://dl.grafana.com/oss/release/grafana_10.0.3_amd64.deb
 sudo dpkg -i grafana_10.0.3_amd64.deb
 sudo systemctl enable --now grafana-server
 ```
-- Access Grafan `http://<your-ip>:3000` (Default login: `admin/admin`)
+- Access Grafana `http://<your-ip>:3000` (Default login: `admin/admin`)
 
 **Install CloudWatch Data Source Plugin**
 
