@@ -20,4 +20,14 @@ kubectl port-forward svc/prometheus-kube-state-metrics 8081:8080 -n monitoring
 - Pods by Status (Running, Pending, Failed, Succeeded) `count by (phase) (kube_pod_status_phase)`
 ![image](https://github.com/user-attachments/assets/d589d30d-0229-4037-ac81-6cef77928931)
 
+- Pods Not in Running State `count(kube_pod_status_phase{phase!="Running"})`
+
+**Node Metrics**
+- Total Number of Nodes `count(kube_node_info)`
+- Node Ready Status `count(kube_node_status_condition{condition="Ready", status="true"})`
+- Node CPU and Memory Capacity
+  - `sum(kube_node_status_capacity_cpu_cores)`
+  - `sum(kube_node_status_capacity_memory_bytes) / 1024 / 1024 / 1024`
+
+
 
