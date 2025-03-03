@@ -28,14 +28,16 @@ Visit https://github.com/prometheus-operator/kube-prometheus for instructions on
 ```
 
 ```bash
-kubectl get pods -n monitoring
-NAME                                                     READY   STATUS    RESTARTS   AGE
-alertmanager-prometheus-kube-prometheus-alertmanager-0   2/2     Running   0          4m1s
-prometheus-grafana-67466f9d58-w4nkb                      3/3     Running   0          4m6s
-prometheus-kube-prometheus-operator-ffbb877b8-snkrw      1/1     Running   0          4m6s
-prometheus-kube-state-metrics-777cbf7bc8-f9wnv           1/1     Running   0          4m6s
-prometheus-prometheus-kube-prometheus-prometheus-0       2/2     Running   0          4m
-prometheus-prometheus-node-exporter-vpg6l                1/1     Running   0          4m6s
+kubectl get svc -n monitoring
+NAME                                      TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+alertmanager-operated                     ClusterIP   None             <none>        9093/TCP,9094/TCP,9094/UDP   11m
+prometheus-grafana                        ClusterIP   10.100.239.154   <none>        80/TCP                       11m
+prometheus-kube-prometheus-alertmanager   ClusterIP   10.100.72.121    <none>        9093/TCP,8080/TCP            11m
+prometheus-kube-prometheus-operator       ClusterIP   10.100.207.221   <none>        443/TCP                      11m
+prometheus-kube-prometheus-prometheus     ClusterIP   10.100.69.226    <none>        9090/TCP,8080/TCP            11m
+prometheus-kube-state-metrics             ClusterIP   10.100.144.81    <none>        8080/TCP                     11m
+prometheus-operated                       ClusterIP   None             <none>        9090/TCP                     11m
+prometheus-prometheus-node-exporter       ClusterIP   10.100.64.228    <none>        9100/TCP   
 ```
 
 ```bash
