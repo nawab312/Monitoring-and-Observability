@@ -90,10 +90,10 @@ kubectl port-forward -n monitoring svc/prometheus-grafana 3000
 - The Prometheus pod belongs to a **StatefulSet** (not a Deployment), meaning it has a **stable pod name**.
 - Since **StatefulSet pods are unique and persistent**, you can directly forward to the pod.
 
-**Why Port Forwarding to a Service (svc/prometheus-grafana)?**
+**Why Port Forwarding to a Service (`svc/prometheus-grafana`)?**
 - **Reason: Grafana is a Stateless Deployment**
 - Grafana runs as a **Deployment**, meaning pods are dynamic and can change.
 - Using a Service ensures you always connect to an available Grafana pod, even if the pod restarts.
 
-**Why Port Forwarding to a Service (svc/prometheus-prometheus-node-exporter)?**
+**Why Port Forwarding to a Service (`svc/prometheus-prometheus-node-exporter`)?**
 - Unlike Prometheus itself, prometheus-prometheus-node-exporter is not a StatefulSet because it does not require persistent storage or stable pod identities. Instead, it runs as a **DaemonSet** to collect system metrics from each node in the cluster.
