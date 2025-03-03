@@ -16,5 +16,8 @@ kubectl port-forward svc/prometheus-kube-state-metrics 8081:8080 -n monitoring
 ![image](https://github.com/user-attachments/assets/dd777090-4aef-41b5-851b-ac843e7c4140)
 
 **Pod Metrics**
-- Total Number of Running Pods ```bash count(kube_pod_status_phase{phase="Running"})```
+- Total Number of Running Pods `count(kube_pod_status_phase{phase="Running"})`
+- Pods by Status (Running, Pending, Failed, Succeeded) `count by (phase) (kube_pod_status_phase)`
+![image](https://github.com/user-attachments/assets/d589d30d-0229-4037-ac81-6cef77928931)
+
 
