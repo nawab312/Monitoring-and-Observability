@@ -10,6 +10,8 @@
 
 ![image](https://github.com/user-attachments/assets/43031f4a-ce6a-4bd6-bcd3-9b800ddcf9e2)
 
+**Prometheus** https://github.com/nawab312/Monitoring-and-Observability/blob/main/Prometheus/Notes.md
+
 
 
   
