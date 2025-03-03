@@ -26,6 +26,8 @@ Common exporters include the *Node Exporter (for hardware metrics)*, the *MySQL 
 
 ![image](https://github.com/user-attachments/assets/52b70cf3-363b-4582-bc44-e9fc3f2db4f7)
 
+### Kubernetes Cluster Monitroing ###
+- **Deploying Prometheus and Grafana on Cluster using Helm** https://github.com/nawab312/Monitoring-and-Observability/blob/main/AWS_Prometheus_Grafana/Kubernetes_Monitoring_Observability.md
 - **Kubernetes Cluster Node EXporter Setup** https://github.com/nawab312/Monitoring-and-Observability/blob/main/AWS_Prometheus_Grafana/Kubernetes_Node_Exporter_Metrics.md
 
  
