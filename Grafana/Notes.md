@@ -12,3 +12,5 @@
   - Table Panel: Tabular representation
   - Gauge Panel: Circular indicators
   - Bar Gauge Panel: Horizontal bars
+ 
+- **Grafana CloudWatch** https://github.com/nawab312/Monitoring-and-Observability/blob/main/AWS_Prometheus_Grafana/CloudWatchMetrics_Grafana.md
