@@ -44,3 +44,9 @@ kubectl apply -f Deployment.yaml
 kubectl apply -f Service.yaml
 ```
 
+```bash
+kubectl get pods
+NAME                             READY   STATUS    RESTARTS   AGE
+log-generator-587fd9bd5c-5whjx   2/2     Running   0          91m
+```
+
