@@ -49,4 +49,9 @@ kubectl get pods
 NAME                             READY   STATUS    RESTARTS   AGE
 log-generator-587fd9bd5c-5whjx   2/2     Running   0          91m
 ```
+- Containers inside the pod *log-generatoe*
+  ```bash
+  kubectl get pod log-generator-587fd9bd5c-5whjx -o jsonpath='{.spec.containers[*].name}'
+  log-generator istio-proxy
+  ```
 
