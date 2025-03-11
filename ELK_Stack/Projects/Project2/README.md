@@ -55,3 +55,23 @@ log-generator-587fd9bd5c-5whjx   2/2     Running   0          91m
   log-generator istio-proxy
   ```
 
+  ### Deploying ELK Stack using Helm ###
+
+  ```bash
+  helm repo add elastic https://helm.elastic.co
+  helm repo update
+  ```
+
+  - Install **Elasticsearch**
+    ```bash
+    helm install elasticsearch elastic/elasticsearch
+    ```
+  - Update the Password
+    ```bash
+    kubectl get secrets --namespace=default elasticsearch-master-credentials -ojsonpath='{.data.password}' | base64 -d
+    Q33jtfjf7oVwytP0
+    ```
+    ```bash
+    helm upgrade elasticsearch elastic/elasticsearch --set elasticsearch.password="Q33jtfjf7oVwytP0" --set replicas=1
+    ```
+
