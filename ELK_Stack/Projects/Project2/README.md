@@ -33,8 +33,8 @@ touch app.js
   ```
 - Create **Dockefile** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project2/Dockerfile
   ```bash
-  docker build -t sid3121997/log-generator-app:nodeJS_v2 .
-  docker push sid3121997/log-generator-app:nodeJS_v2
+  docker build -t sid3121997/log-generator-app:nodeJS_v3 .
+  docker push sid3121997/log-generator-app:nodeJS_v3
   ```
 - Create **Deployment** for your app https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project2/Deployment.yaml
 - Create **Service** for your app https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project2/Service.yaml
