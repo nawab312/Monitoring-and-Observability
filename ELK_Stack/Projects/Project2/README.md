@@ -31,4 +31,16 @@ touch app.js
   {"level":"info","message":"Generated log at 2025-03-11T15:41:28.009Z","timestamp":"2025-03-11T15:41:28.009Z"}
   {"level":"info","message":"Generated log at 2025-03-11T15:41:33.013Z","timestamp":"2025-03-11T15:41:33.013Z"}
   ```
+- Create **Dockefile** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project2/Dockerfile
+  ```bash
+  docker build -t sid3121997/log-generator-app:nodeJS_v2 .
+  docker push sid3121997/log-generator-app:nodeJS_v2
+  ```
+- Create **Deployment** for your app https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project2/Deployment.yaml
+- Create **Service** for your app https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project2/Service.yaml
+
+```bash
+kubectl apply -f Deployment.yaml
+kubectl apply -f Service.yaml
+```
 
