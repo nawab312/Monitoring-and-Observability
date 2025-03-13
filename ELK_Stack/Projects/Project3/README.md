@@ -8,6 +8,7 @@ This project sets up Fluentd as a log collector in a Kubernetes cluster to gathe
 ### Components ###
 - **Log Generator Application**
   - A sample application writing logs to `/app/logs/myapp.log` inside the *Pod* which is mapped to `/var/log/myapps/app.log` on the host.
+  - Code for App https://github.com/nawab312/Monitoring-and-Observability/tree/main/ELK_Stack/Projects/Project2#readme
  
 - **Fluentd DaemonSet**
   - Runs on every Kubernetes node.
