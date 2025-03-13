@@ -23,3 +23,27 @@ This project sets up Fluentd as a log collector in a Kubernetes cluster to gathe
  
 ### How to Implement ###
 
+**Log Generator Application**
+- *Deployment.yaml* https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project3/LogGeneratorApp/Deployment.yaml
+- *Service.yaml* https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project3/LogGeneratorApp/Service.yaml
+```bash
+kubectl apply -f Deployment.yaml
+kubectl apply -f Service.yaml
+```
+
+**FluentD**
+- *ConfigMap.yaml* https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project3/FluentD/ConfigMap.yaml
+- *DaemonSet.yaml* https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project3/FluentD/DaemonSet.yaml
+```bash
+kubectl apply -f ConfigMap.yaml
+kubectl apply -f DaemonSet.yaml
+```
+
+**ElasticSearch**
+- *PVC.yaml* https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project3/ElasticSearch/PVC.yaml
+- *Service.yaml* https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project3/ElasticSearch/Service.yaml
+- *StatefulSet.yaml* https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project3/ElasticSearch/StatefulSet.yaml
+
+**Kibana**
+- *Kibana.yaml* https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project3/Kibana/Kibana.yaml
+
