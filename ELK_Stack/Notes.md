@@ -18,4 +18,8 @@
 
 **ElasticSearch** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/ELASTICSEARCH_NOTES.md
 
+**FluentD** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/FLUENTD_Notes.md
+
+**Kubernetes Log Collection with Fluentd and Elasticsearch** https://github.com/nawab312/Monitoring-and-Observability/tree/main/ELK_Stack/Projects/Project3#readme
+
 
