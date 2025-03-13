@@ -46,4 +46,5 @@ kubectl apply -f DaemonSet.yaml
 
 **Kibana**
 - *Kibana.yaml* https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Projects/Project3/Kibana/Kibana.yaml
+- Access Kibana `http://<minikube-ip>:30001`
 
