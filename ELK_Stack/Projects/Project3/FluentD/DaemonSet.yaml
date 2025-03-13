@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: fluentd
+  namespace: default
+  labels:
+    app: fluentd
+spec:
+  selector:
+    matchLabels:
+      app: fluentd
+  template:
+    metadata:
+      labels:
+        app: fluentd
+    spec:
+      containers:
+      - name: fluentd
+        image: fluent/fluentd-kubernetes-daemonset:v1.16.5-debian-elasticsearch8-1.0
+        volumeMounts:
+        - name: fluentd-config
+          mountPath: /fluentd/etc/
+        - name: app-logs  # Mount log directory
+          mountPath: /var/log/myapp/  # Fluentd reads logs from this path inside the pod
+          readOnly: true
+      volumes:
+      - name: fluentd-config
+        configMap:
+          name: fluentd-config
+      - name: app-logs  # Mount host log directory
+        hostPath:
+          path: /var/log/myapp/  # MUST match the host log directory
+          type: DirectoryOrCreate
