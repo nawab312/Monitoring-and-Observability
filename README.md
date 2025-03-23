@@ -4,15 +4,12 @@
 - **Difference Between Monitoring, Logging, and Observability**
 - https://github.com/nawab312/Monitoring-and-Observability/blob/main/Introduction_To_Monitoring.md
 
-2. Introduction to Prometheus
-
-What is Prometheus?
-
-Features of Prometheus
-
-Prometheus Architecture
-
-Prometheus Components (Prometheus Server, Alertmanager, Pushgateway, Exporters)
+### Introduction to Prometheus ###
+- **What is Prometheus?**
+- **Features of Prometheus**
+- **Prometheus Architecture**
+- **Prometheus Components (Prometheus Server, Alertmanager, Pushgateway, Exporters)**
+- https://github.com/nawab312/Monitoring-and-Observability/blob/main/Introduction_To_Prometheus.md
 
 3. Installing and Configuring Prometheus
 
