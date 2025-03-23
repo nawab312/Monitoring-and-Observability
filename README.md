@@ -179,6 +179,7 @@ CI/CD Integration for Monitoring as Code
 - **Monitoring CI/CD Pipelines**
 - **Observability in Large-Scale Distributed Systems**
 - **Incident Response and Troubleshooting with Grafana & Prometheus**
+- https://github.com/nawab312/Monitoring-and-Observability/blob/main/Real-World_Use_Cases_and_Case_Studies.md
 
 18. Prometheus and Grafana Interview Questions & Troubleshooting
 
