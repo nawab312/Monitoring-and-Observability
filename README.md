@@ -2,6 +2,7 @@
 - **What is Monitoring?**
 - **Why Monitoring is Important in DevOps?**
 - **Difference Between Monitoring, Logging, and Observability**
+- https://github.com/nawab312/Monitoring-and-Observability/blob/main/Introduction_To_Monitoring.md
 
 2. Introduction to Prometheus
 
