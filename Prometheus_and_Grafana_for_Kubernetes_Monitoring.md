@@ -236,8 +236,6 @@ kubectl port-forward -n monitoring svc/prometheus-grafana 3000:80
 ---
 
 ### Kubernetes Cluster Kube State Metrics Setup ###
-**Setup:** https://github.com/nawab312/Monitoring-and-Observability/blob/main/AWS_Prometheus_Grafana/Kubernetes_Monitoring_Observability.md
-
 - Access **kube-state-metrics**, which exposes Kubernetes object-level metrics.
 ```bash
 kubectl port-forward svc/prometheus-kube-state-metrics 8081:8080 -n monitoring
