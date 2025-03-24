@@ -35,13 +35,11 @@ Filtering and Label Matching
 
 Writing Advanced Queries
 
-5. Prometheus Exporters
-
-What are Exporters?
-
-Commonly Used Exporters (Node Exporter, cAdvisor, Blackbox Exporter, MySQL Exporter)
-
-Custom Exporters - Writing Your Own
+### Prometheus Exporters ###
+- **What are Exporters?**
+- **Commonly Used Exporters (Node Exporter, cAdvisor, Blackbox Exporter, MySQL Exporter)**
+- **Custom Exporters - Writing Your Own**
+- https://github.com/nawab312/Monitoring-and-Observability/blob/main/Prometheus_Exporters.md
 
 6. Prometheus Alerting and Notification
 
@@ -109,6 +107,7 @@ Handling False Positives and Alert Noise
 - **Visualizing Kubernetes Metrics in Grafana**
 - **Monitoring Cluster Health, Resource Utilization, and Workloads**
 - **Setting Up Alerts for Kubernetes Events**
+- https://github.com/nawab312/Monitoring-and-Observability/blob/main/Prometheus_and_Grafana_for_Kubernetes_Monitoring.md
 
 12. Logging with Loki and Grafana
 
