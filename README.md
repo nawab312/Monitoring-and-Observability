@@ -103,17 +103,12 @@ Alerting Strategies and Best Practices
 
 Handling False Positives and Alert Noise
 
-11. Prometheus and Grafana for Kubernetes Monitoring
-
-Monitoring Kubernetes Nodes and Pods
-
-Using kube-prometheus-stack for Kubernetes Monitoring
-
-Visualizing Kubernetes Metrics in Grafana
-
-Monitoring Cluster Health, Resource Utilization, and Workloads
-
-Setting Up Alerts for Kubernetes Events
+### Prometheus and Grafana for Kubernetes Monitoring ###
+- **Monitoring Kubernetes Nodes and Pods**
+- **Using kube-prometheus-stack for Kubernetes Monitoring**
+- **Visualizing Kubernetes Metrics in Grafana**
+- **Monitoring Cluster Health, Resource Utilization, and Workloads**
+- **Setting Up Alerts for Kubernetes Events**
 
 12. Logging with Loki and Grafana
 
