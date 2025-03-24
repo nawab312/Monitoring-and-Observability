@@ -73,11 +73,130 @@ As Filebeat reads each log line, it processes the log entry and adds metadata su
 - Filter: Filters process data to transform, enhance, or extract meaningful information.
 - Output: The output plugins specify where the processed data should be sent. For example, you may send logs to Elasticsearch, files, or even another service.
 
-**Example1** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Logstash/Logstash1.md
+### Example 1 ###
+Create `logstash.conf` at path `/home/siddharth312/ELK_Stack`
+```bash
+#logstash.conf
+input {
+    stdin { }
+}
 
-**Example2** View logs in a file https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Logstash/Example2.md
+filter {
+    mutate {
+        add_field => { "added_field" => "Test field added" }
+    }
+}
 
-**Example3** Parsing Apache Logs with GROK https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/Logstash/Example3.md
+output {
+    stdout{ codec => rubydebug }
+}
+```
+
+Go to path `/home/siddharth312/ELK_Stack/logstash-8.17.1/bin`
+```bash
+./logstash -f /home/siddharth312/ELK_Stack/logstash.conf
+```
+
+After Logstash starts running, type some input in the terminal (such as Hello, Logstash!) and press Enter. Logstash will process this input and output the data along with the added field `added_field`.
+```bash
+Hello, Logstash!
+{
+    "added_field" => "Test field added",
+       "@version" => "1",
+        "message" => "Hello, Logstash!",
+     "@timestamp" => 2025-02-25T05:32:35.993492407Z,
+          "event" => {
+        "original" => "Hello, Logstash!"
+    },
+           "host" => {
+        "hostname" => "siddharth312-GF65-Thin-9SD"
+    }
+}
+```
+
+### View Logs in a File ###
+
+Create `logstash.conf` at path `/home/siddharth312/ELK_Stack`
+```bash
+#logstash.conf
+input {
+    stdin { }
+}
+
+filter {
+    mutate {
+        add_field => { "added_field" => "Test field added" }
+    }
+}
+
+output {
+    file {
+        path => "/home/siddharth312/ELK_Stack/output.log"
+    }
+}
+```
+
+Go to path `/home/siddharth312/ELK_Stack/logstash-8.17.1/bin`
+```bash
+./logstash -f /home/siddharth312/ELK_Stack/logstash.conf
+```
+
+After Logstash starts running, type some input in the terminal (such as Siddharth or Singh). Logstash will process this input and save the output in output.log
+```bash
+#output.log
+{"event":{"original":""},"@version":"1","message":"","host":{"hostname":"siddharth312-GF65-Thin-9SD"},"added_field":"Test field added","@timestamp":"2025-02-25T05:35:40.697756177Z"}
+{"event":{"original":"Siddharth"},"@version":"1","message":"Siddharth","host":{"hostname":"siddharth312-GF65-Thin-9SD"},"added_field":"Test field added","@timestamp":"2025-02-25T05:35:46.526707895Z"}
+{"event":{"original":"Singh"},"@version":"1","message":"Singh","host":{"hostname":"siddharth312-GF65-Thin-9SD"},"added_field":"Test field added","@timestamp":"2025-02-25T05:36:00.839776933Z"}
+```
+### Parsing Apache Logs with GROK ###
+
+Create `logstash.conf` at path `/home/siddharth312/ELK_Stack`
+```bash
+input {
+    file {
+        path => "/var/log/apache2/access.log"
+        start_position => "beginning"
+    }
+}
+
+filter {
+    grok {
+        match => { "message" => "%{IP:client_ip}" }
+    }
+}
+
+output {
+    stdout {
+        codec => rubydebug
+    }
+}
+```
+
+Go to path `/home/siddharth312/ELK_Stack/logstash-8.17.1/bin`
+```bash
+./logstash -f /home/siddharth312/ELK_Stack/logstash.conf
+```
+
+After Logstash starts running, Access the apache page by using `localhost`. Logstash will process this input and output the `client_ip` 
+```bash
+{
+      "@version" => "1",
+     "client_ip" => "127.0.0.1",
+         "event" => {
+        "original" => "127.0.0.1 - - [25/Feb/2025:11:20:42 +0530] \"GET / HTTP/1.1\" 200 3460 \"-\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0\""
+    },
+          "host" => {
+        "name" => "siddharth312-GF65-Thin-9SD"
+    },
+           "log" => {
+        "file" => {
+            "path" => "/var/log/apache2/access.log"
+        }
+    },
+       "message" => "127.0.0.1 - - [25/Feb/2025:11:20:42 +0530] \"GET / HTTP/1.1\" 200 3460 \"-\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0\"",
+    "@timestamp" => 2025-02-25T05:50:43.083079491Z
+}
+```
 
 **ElasticSearch** https://github.com/nawab312/Monitoring-and-Observability/blob/main/ELK_Stack/ELASTICSEARCH_NOTES.md
 
