@@ -109,17 +109,19 @@ Handling False Positives and Alert Noise
 - **Setting Up Alerts for Kubernetes Events**
 - https://github.com/nawab312/Monitoring-and-Observability/blob/main/Prometheus_and_Grafana_for_Kubernetes_Monitoring.md
 
-12. Logging with Loki and Grafana
-
-What is Grafana Loki?
-
-Setting Up Loki for Log Aggregation
-
-Using Promtail for Log Collection
-
-Querying Logs with LogQL
-
-Correlating Logs and Metrics in Grafana
+### Logging with Loki, ELK, and Grafana ###
+- **What is Logging in Observability?**
+- **What is Grafana Loki?**
+- **Setting Up Loki for Log Aggregation**
+- **Using Promtail for Log Collection**
+- **Querying Logs with LogQL**
+- **Centralized Logging with ELK Stack (Elasticsearch, Logstash, Kibana)**
+- **Setting Up Filebeat for Log Shipping**
+- **Storing and Searching Logs in Elasticsearch**
+- **Visualizing Logs in Kibana and Grafana**
+- **Integrating Logs with Metrics for Full Observability**
+- **Correlating Logs and Metrics in Grafana**
+- https://github.com/nawab312/Monitoring-and-Observability/blob/main/Logging_Loki_ELK_Grafana.md
 
 13. Advanced Prometheus Topics
 
