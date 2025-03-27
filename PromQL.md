@@ -7,7 +7,7 @@
 - Range Vector: Fetches historical data within a time range.
   ```bash
   node_cpu_seconds_total[5m]
-  ``
+  ```
 - Scalar: Returns a single numerical value.
   ```bash
   scalar(node_memory_MemTotal_bytes)
