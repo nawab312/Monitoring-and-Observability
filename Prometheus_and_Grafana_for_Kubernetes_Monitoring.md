@@ -227,7 +227,7 @@ kubectl port-forward -n monitoring svc/prometheus-grafana 3000:80
 - **Memory Usage:** `(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100`
 ![image](https://github.com/user-attachments/assets/90fd3f34-b8e4-4701-8380-dcdae75abbc7)
 
-- **Disk Usage:** `(node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100`
+- **Disk Usage:** `100 * (node_filesystem_used_bytes / node_filesystem_size_bytes)`
 ![image](https://github.com/user-attachments/assets/d7ece13c-7b2e-4066-bb4e-bef4a5b3e719)
 
 - **Network Traffic:** `rate(node_network_receive_bytes_total[5m])`
