@@ -26,4 +26,21 @@
 
 ![image](https://github.com/user-attachments/assets/6239cb5e-45a0-40f5-b541-6a855212ca70)
 
+The **sum by (label)** function in PromQL is used to sum up metric values while preserving a specific label. It helps in aggregating data but keeps certain labels so that you can see meaningful groupings in your query results.
+```bash
+sum by (label) (metric)
+```
+
+Example: Summing CPU Usage Per Job
+- Consider a metric cpu_usage that has multiple instances across different jobs.
+
+![image](https://github.com/user-attachments/assets/2bdda500-309f-4bde-a42e-4cf90a1ff358)
+
+```bash
+sum by (job) (cpu_usage)
+```
+![image](https://github.com/user-attachments/assets/2fdbd963-ac66-4099-8176-ffe5c3744d09)
+
+
+
 
