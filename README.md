@@ -23,17 +23,12 @@ Scrape Configurations and Targets
 
 Service Discovery in Prometheus
 
-4. PromQL - Prometheus Query Language
-
-Basics of PromQL
-
-Aggregation Functions (sum, avg, min, max, count)
-
-Rate, Increase, and Delta Functions
-
-Filtering and Label Matching
-
-Writing Advanced Queries
+### PromQL - Prometheus Query Language ###
+- **Basics of PromQL**
+- **Aggregation Functions (sum, avg, min, max, count)**
+- **Rate, Increase, and Delta Functions**
+- **Filtering and Label Matching**
+- **Writing Advanced Queries**
 
 ### Prometheus Exporters ###
 - **What are Exporters?**
@@ -41,15 +36,11 @@ Writing Advanced Queries
 - **Custom Exporters - Writing Your Own**
 - https://github.com/nawab312/Monitoring-and-Observability/blob/main/Prometheus_Exporters.md
 
-6. Prometheus Alerting and Notification
-
-Introduction to Alertmanager
-
-Configuring Alerting Rules
-
-Alertmanager Configuration and Routing
-
-Sending Alerts to Slack, Email, and Webhooks
+### Prometheus Alerting and Notification ###
+- **Introduction to Alertmanager**
+- **Configuring Alerting Rules**
+- **Alertmanager Configuration and Routing**
+- **Sending Alerts to Slack, Email, and Webhooks**
 
 7. Introduction to Grafana
 
