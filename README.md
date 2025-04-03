@@ -82,15 +82,11 @@ Using Grafana Templates and Variables for Dynamic Dashboards
 
 Best Practices for Dashboard Design
 
-10. Grafana Alerts and Notifications
-
-Creating Alerts in Grafana
-
-Configuring Notification Channels (Slack, Email, Webhooks, etc.)
-
-Alerting Strategies and Best Practices
-
-Handling False Positives and Alert Noise
+### Grafana Alerts and Notifications ###
+- **Creating Alerts in Grafana**
+- **Configuring Notification Channels (Slack, Email, Webhooks, etc.)**
+- **Alerting Strategies and Best Practices**
+- **Handling False Positives and Alert Noise**
 
 ### Prometheus and Grafana for Kubernetes Monitoring ###
 - **Monitoring Kubernetes Nodes and Pods**
