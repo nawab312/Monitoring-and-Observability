@@ -1,6 +1,7 @@
 Prometheus provides alerting and notification features through Alertmanager. 
 This allows you to define rules, trigger alerts based on conditions, and send notifications to various channels like Slack, Email, PagerDuty, or Webhooks.
 Alertmanager sends notifications to configured channels like Slack, Email, or Webhooks.
+
 **Introduction to Alertmanager**
 
 Alertmanager is a component in the Prometheus ecosystem responsible for:
