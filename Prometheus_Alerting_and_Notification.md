@@ -85,6 +85,14 @@ receivers:
   - `group_interval: 5m` → If multiple alerts come in, sends updates every 5 minutes.
   - `repeat_interval: 3h` → If an alert persists, resend notifications every 3 hours.
  
+The `group_by` parameter helps in grouping multiple related alerts before sending a notification. Instead of sending individual notifications for each alert, it groups them based on specified labels, reducing alert fatigue. 
+- Example Scenario: Imagine we have three alerts triggered for different Kubernetes nodes due to high CPU usage:
+
+![image](https://github.com/user-attachments/assets/4996b625-b5a0-47fb-b5c1-32123657b53d)
+
+Without `group_by`, Alertmanager would send three separate notifications, one for each node. But with `group_by: ['alertname']`, it will send one notification that includes all three alerts under the same name.
+
+ 
 **Sending Alerts to Different Notification Channels**
 
 Slack Integration. To send alerts to Slack:
