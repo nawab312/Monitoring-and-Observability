@@ -1,5 +1,7 @@
 Prometheus is an open-source systems monitoring and alerting toolkit. It is known for its robust data model, powerful query language (PromQL), and the ability to generate alerts based on the collected time-series data. It can be configured and set up on both bare-metal servers and container environments like Kubernetes.
 
+*Prometheus is pull-based. Prometheus does not wait for applications to send metrics. Prometheus periodically scrapes metrics. Targets expose metrics on an HTTP endpoint (usually `/metrics`)*
+
 **Prometheus Web UI** allows users to explore the collected metrics data, run ad-hoc PromQL queries, and visualize the results directly within Prometheus.
 **Grafana** is a powerful dashboard and visualization tool that integrates with Prometheus to provide rich, customizable visualizations of the metrics data.
 
