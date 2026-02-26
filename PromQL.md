@@ -46,3 +46,14 @@ sum by (job) (cpu_usage)
 
 Decoding CPU Usage: `100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)`
 
+- `node_cpu_seconds_total{mode="idle"}`
+  - This metric comes from Node Exporter and represents the total cumulative seconds the CPU has spent in a given mode since boot.
+  - It’s a counter.
+- `rate(...[5m])`
+  - Since it’s a counter, we take the per-second rate over the last 5 minutes.
+  - For a single core, this value will be between 0 and 1.
+- `avg by (instance)(...)`
+  - Each CPU core exports its own time series.
+ 
+---
+
