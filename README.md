@@ -42,6 +42,7 @@ Service Discovery in Prometheus
 - **Configuring Alerting Rules**
 - **Alertmanager Configuration and Routing**
 - **Sending Alerts to Slack, Email, and Webhooks**
+- https://github.com/nawab312/Monitoring-and-Observability/blob/main/Prometheus_Alerting_and_Notification.md
 
 7. Introduction to Grafana
 
