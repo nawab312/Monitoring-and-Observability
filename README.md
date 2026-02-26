@@ -29,6 +29,7 @@ Service Discovery in Prometheus
 - **Rate, Increase, and Delta Functions**
 - **Filtering and Label Matching**
 - **Writing Advanced Queries**
+- https://github.com/nawab312/Monitoring-and-Observability/blob/main/PromQL.md
 
 ### Prometheus Exporters ###
 - **What are Exporters?**
