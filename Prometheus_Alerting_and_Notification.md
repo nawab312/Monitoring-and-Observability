@@ -82,7 +82,7 @@ receivers:
   - `receiver: "slack_notifications"` → Alerts are sent to the `slack_notifications` receiver.
   - `group_by: ['alertname', 'severity']` → Alerts with the same alertname and severity are grouped.
   - `group_wait: 30s` → Waits 30 seconds before sending the first alert (useful for short-lived alerts).
-  - `group_interval: 5m` → If multiple alerts come in, sends updates every 5 minutes.
+  - `group_interval: 5m` → If multiple alerts come in, sends updates every 5 minutes. If new alerts join the group, don’t notify instantly — wait 5 min.
   - `repeat_interval: 3h` → If an alert persists, resend notifications every 3 hours.
  
 The `group_by` parameter helps in grouping multiple related alerts before sending a notification. Instead of sending individual notifications for each alert, it groups them based on specified labels, reducing alert fatigue. 
