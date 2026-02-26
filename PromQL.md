@@ -42,5 +42,7 @@ sum by (job) (cpu_usage)
 ![image](https://github.com/user-attachments/assets/2fdbd963-ac66-4099-8176-ffe5c3744d09)
 
 
+---
 
+Decoding CPU Usage: `100 - (avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)`
 
