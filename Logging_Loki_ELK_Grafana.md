@@ -272,6 +272,7 @@ $ curl -X GET "localhost:9200/"
 - Delete an Index: `curl -X DELETE "http://localhost:9200/index_name"`
 
 `_search` endpoint is used to search for documents within an index (or across multiple indices).
+- `curl -X GET "localhost:9200/index_name/_search"`
 
 Get all documents from an Elasticsearch index, use the `_search` API with the `match_all` query
 ```bash
