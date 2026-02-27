@@ -317,6 +317,8 @@ Get all documents from an Elasticsearch index, use the `_search` API with the `m
 
 #### Mappings ####
 Mappings define how fields are stored and indexed in Elasticsearch. Default Mapping Behavior: When you index data without explicitly defining a mapping, Elasticsearch automatically guesses the field types.
+- keyword: Used for exact matching where the string is stored as-is, without any analysis or tokenization. It is typically used for fields that require precise matching, like IDs, emails, tags, product codes, and status values.
+- Text: Used for full-text search where the string is analyzed, tokenized, and indexed by individual terms (words). It is meant for fields containing descriptive content, such as product descriptions, blog articles, and comments.
 ```bash
 curl -X PUT "localhost:9200/products" -H 'Content-Type: application/json' -d'
 {
@@ -532,10 +534,6 @@ curl -X GET "localhost:9200/library/_search?pretty" -H 'Content-Type: applicatio
   }
 }
 ```
-
-#### Keyword and Text data type in Elasticsearch ####
-- keyword: Used for exact matching where the string is stored as-is, without any analysis or tokenization. It is typically used for fields that require precise matching, like IDs, emails, tags, product codes, and status values.
-- Text: Used for full-text search where the string is analyzed, tokenized, and indexed by individual terms (words). It is meant for fields containing descriptive content, such as product descriptions, blog articles, and comments.
 
 ### Example 2 ###
 Imagine you're building an online store, and you have two fields: one for product codes and another for product descriptions.
