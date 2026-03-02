@@ -234,6 +234,29 @@ What happens internally when a primary shard goes down?
 
 **Index:** A collection of documents with similar characteristics. Comparable to a database table in relational databases
 
+**Indexing:** Adding a document into Elasticsearch so it can be stored and searched. Steps:
+- You send a JSON document (like a log entry) to Elasticsearch.
+- Elasticsearch analyzes the fields (if they’re `text`), creates tokens, and builds internal data structures.
+- The document is written to the *translog* and added to an in-memory segment.
+- After a refresh, it becomes searchable.
+
+In Elasticsearch, what is the difference between near real-time search and real-time GET, and why can a document be searchable via GET but not appear in search results immediately after indexing?
+*Real-Time GET*
+- When you do: `GET index/_doc/1`. Elasticsearch:
+  - Reads directly from the translog (transaction log) if needed.
+  - Returns the document immediately after indexing.
+*Near Real-Time Search**
+- When you do:
+  ```bash
+  GET index/_search
+  {
+    "query": {
+      "match": { "name": "Siddharth" }
+     }
+  }
+  ```
+  - Search: Only looks at Lucene segments. A document becomes searchable after a refresh. Default refresh interval ≈ 1 second
+
 **Document:** A single piece of data stored in JSON format
 
 **Field:** Key-value pairs within a document.
