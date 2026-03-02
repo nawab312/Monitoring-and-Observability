@@ -814,6 +814,41 @@ fluent.conf is the main configuration file for Fluentd. It defines how logs are 
     }
     ```
 
+## Kibana ##
+
+**Index Pattern**
+- An index pattern tells Kibana: Which Elasticsearch indices should I search?
+- Example:
+  - Your indices:
+  ```bash
+  logs-2026.03.02
+  logs-2026.03.01
+  ```
+  - Index pattern:
+  ```bash
+  logs-*
+  ```
+  - If index pattern is wrong (e.g., log-* instead of logs-*), Kibana searches nothing. You see no logs
+ 
+**Time Filter**
+- Kibana always applies a time range filter. Top-right corner:
+```code
+Last 15 minutes
+Last 1 hour
+Last 7 days
+Custom
+```
+- If your logs are from 2 hours ago and time filter is: `Last 15 minutes`. You see nothing.
+
+**Time Field**
+- When creating index pattern, Kibana asks “Which field contains the timestamp?”
+- Common fields: `@timestamp`, `timestamp`, `event_time`
+- If:
+  - Logs use `event_time`
+  - But Kibana index pattern uses `@timestamp`
+  - And `@timestamp` is empty or wrong
+  - Then time filtering removes everything. You get empty results.
+
 ## EFK for Kubernetes ##
 
 ![image](https://github.com/user-attachments/assets/0c26ed6d-5f2b-43a7-ae88-9246db7a9c30)
