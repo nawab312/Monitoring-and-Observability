@@ -212,6 +212,12 @@ A distributed search and analytics engine. Stores data in **JSON format** and al
   - Primary Shard: A primary shard is where the actual data is stored. Elasticsearch splits data into primary shards during the indexing process.
   - Sharding for Scalability: By dividing data into shards, Elasticsearch can distribute the load and data across multiple nodes in a cluster, making it scalable. This allows Elasticsearch to handle large volumes of data efficiently, as each shard can be stored and queried independently.
 
+What happens internally when a primary shard goes down?
+- When a primary shard goes down, the cluster detects the failure via the master node and promotes one of the replica shards to become the new primary.
+- The cluster state is updated and propagated to all nodes to reflect the new primary assignment.
+- During this brief period, indexing requests to that shard may fail or be retried until the new primary is ready.
+- If no replica exists, the shard becomes unassigned and the cluster health turns red.
+
 #### How Shard Works ####
 - Data Distribution: When you create an index in Elasticsearch, you specify the number of primary shards. If you specify 3 shards, the data will be divided into 3 separate primary shards, and each shard can be placed on different nodes for distribution.
 - Query Distribution: When a query is executed, Elasticsearch will route the query to the appropriate shards across different nodes. Each shard processes the query and returns the result, which is then aggregated and presented to the user.
