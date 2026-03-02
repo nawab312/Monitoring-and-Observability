@@ -284,12 +284,24 @@ Get all documents from an Elasticsearch index, use the `_search` API with the `m
 ```
 
 #### Querying with Elastic Search ####
-- **match**: The most commonly used query for full-text search. It analyzes the input query and compares it to the text fields.
+- **match**: The most commonly used query for full-text search. It analyzes the input query and compares it to the text fields. When we say “analyze the input”, we mean Elasticsearch processes the text before storing or searching it using an **analyzer**
+  - An analyzer typically does things like: Break text into words (tokenization). Convert to lowercase. Remove punctuation.
+  - Example If you index this into a `text` field: `"DevOps Engineer"`. The analyzer may store it as: `["devops", "engineer"]`
 ```bash
 {
     "query": {
         "match": {
             "message": "Hello"
+        }
+    }
+}
+```
+- **term**: query performs an exact match and does not analyze the input, so it works correctly on keyword fields or exact values.
+```bash
+{
+    "query": {
+        "term": {
+            "product_code": "ABC123"
         }
     }
 }
