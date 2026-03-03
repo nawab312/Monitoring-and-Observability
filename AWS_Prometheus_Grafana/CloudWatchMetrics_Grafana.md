@@ -58,4 +58,28 @@ aws cloudwatch list-metrics --region us-east-1
 
 ![image](https://github.com/user-attachments/assets/c3fd6df6-578c-4aa1-9184-64ff6dece589)
 
+--- 
+
+### Metrics ###
+
+**EC2 Metrics** 
+- Namespace: `AWS/EC2`
+- Examples: CPUUtilization, NetworkIn, NetworkOut, DiskReadOps, DiskWriteOps
+
+**EBS Metrics**
+- Namespace: `AWS/EBS`
+- Example: VolumeReadOps, VolumeWriteOps, VolumeWriteBytes, BurstBalance (gp2)
+- If you’re diagnosing I/O bottlenecks, this namespace matters more than EC2.
+
+**RDS Metrics**
+- Namespace: `AWS/RDS`
+- Example: CPUUtilization, FreeStorageSpace, DatabaseConnections, ReadIOPS, WriteIOPS
+
+**Lambda Metrics**
+- Namespace: `AWS/Lambda`
+- Example: Invocations, Errors, Duration, Throttles, ConcurrentExecutions
+- There is no direct “cold start metric.” You must infer it using duration or logs.
+
+**ALB / ELB Metrics**
+- Namespace: `AWS/ApplicationELB`
 
