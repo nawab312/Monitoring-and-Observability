@@ -17,6 +17,40 @@ Prometheus is an open-source systems monitoring and alerting toolkit. It is know
 - **Service discovery** automatically identifies and manages the list of scrape targets (i.e., services or applications) that Prometheus monitors. This is crucial in dynamic environments like Kubernetes where services are constantly being created and destroyed.Components:
   - **Kubernetes:** In Kubernetes environments, Prometheus can automatically discover services, pods, and nodes using Kubernetes API, ensuring it monitors the most up-to-date list of targets.
   - **File SD (Service Discovery):** Prometheus can also read static target configurations from files, allowing for flexibility in environments where dynamic service discovery is not used.
+  - A *ServiceMonitor* is a custom resource used with the Prometheus Operator to tell Prometheus which Kubernetes Services should be scraped for metrics. A ServiceMonitor does not mean “service metrics.” It is primarily a service discovery mechanism. Prometheus ultimately scrapes application metrics from Pods, but it discovers those Pods indirectly through the Service’s endpoints.
+    - Labels: Used by the ServiceMonitor to select the service.
+    - Port name: The service must expose a named port where metrics are available.
+    - Metrics endpoint: Usually `/metrics`
+    - Namespace / selector: Defines which namespace and services Prometheus should monitor.
+    ```yaml
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: my-app
+      labels:
+        app: my-app
+    spec:
+      ports:
+      - name: metrics
+        port: 8080
+      selector:
+        app: my-app
+    ```
+    - ServiceMonitor:
+    ```yaml
+    apiVersion: monitoring.coreos.com/v1
+    kind: ServiceMonitor
+    metadata:
+      name: my-app-monitor
+    spec:
+      selector:
+        matchLabels:
+          app: my-app
+      endpoints:
+      - port: metrics
+        path: /metrics
+        interval: 30s
+    ```
  
 - **Pushgateway** is used to expose metrics from short-lived jobs or applications that cannot be scraped directly by Prometheus. These jobs push their metrics to the Pushgateway, which then makes them available for Prometheus to scrape(pull).
   - Use Case: It's particularly useful for batch jobs or tasks that have a limited lifespan and would otherwise not have their metrics collected
