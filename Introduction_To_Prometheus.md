@@ -27,3 +27,35 @@ Prometheus is an open-source systems monitoring and alerting toolkit. It is know
 Common exporters include the *Node Exporter (for hardware metrics)*, the *MySQL Exporter (for database metrics)*, and various other application-specific exporters.
 
 ![image](https://github.com/user-attachments/assets/52b70cf3-363b-4582-bc44-e9fc3f2db4f7)
+
+---
+
+**Why do many companies still use Prometheus + Grafana for Kubernetes monitoring even though AWS already provides CloudWatch?**
+- Prometheus Is Kubernetes-Native
+  - In Kubernetes workloads are dynamic. Pods: start, stop, reschedule. Prometheus solves this with service discovery.
+  - Prometheus automatically discovers pods using Kubernetes API
+- Prometheus Uses Pull-Based Metrics
+  - Advantages:
+    - no agent required inside apps
+    - simple `/metrics` endpoint
+  - CloudWatch uses a push model, which often requires:
+    - agents, exporters, extra configuration
+- Cost Model
+  - CloudWatch pricing:
+    ```code
+    Pay per metric
+    Pay per API call
+    Pay per log ingestion
+    ```
+  - In large Kubernetes clusters: `Thousands of pods`, `Thousands of metrics`
+  - Costs can grow very quickly.
+
+```code
+Application metrics → Prometheus
+Dashboards → Grafana
+Infrastructure metrics → CloudWatch
+Logs → Loki / CloudWatch Logs
+Alerts → Alertmanager
+```
+
+---
