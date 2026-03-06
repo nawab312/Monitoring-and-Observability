@@ -1,3 +1,6 @@
+**Types of Metrics**
+- *Counter* Represents the total number of events since the application started (e.g., total HTTP requests handled). Only increases over time
+
 **Basics of PromQL**
 - PromQL operates on time-series data and supports instant vector, range vector, scalar, and string types.
 - Instant Vector: Fetches the latest value of a metric.
