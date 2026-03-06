@@ -34,6 +34,10 @@
 
 ![image](https://github.com/user-attachments/assets/e5a47d27-cf48-4da5-9bb3-925065d094fd)
 
+- Your application running in Kubernetes exposes metrics and Prometheus is scraping them every 15 seconds. You create this PromQL query in Grafana: `rate(http_requests_total[5s])`. But the graph shows no data.
+  - The query returns no data because the range window is smaller than the scrape interval.
+  - The rate() function requires at least two data points in the time window to calculate a rate.
+
 **Filtering and Label Matching**
 
 ![image](https://github.com/user-attachments/assets/6239cb5e-45a0-40f5-b541-6a855212ca70)
@@ -68,4 +72,6 @@ Decoding CPU Usage: `100 - (avg by (instance) (rate(node_cpu_seconds_total{mode=
   - Each CPU core exports its own time series.
  
 ---
+
+
 
