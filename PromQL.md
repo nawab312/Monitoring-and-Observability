@@ -1,5 +1,14 @@
 **Types of Metrics**
-- *Counter* Represents the total number of events since the application started (e.g., total HTTP requests handled). Only increases over time
+- *Counter* Represents the total number of events since the application started (e.g., total HTTP requests handled). Only increases over time.
+  - Counters can reset to 0 when an application or Pod restarts. `100 → 120 → 140 → (pod restart) → 5 → 20 → 40`
+  - A naive calculation would think the metric dropped from 140 → 5, which would produce a negative rate.
+  - However `rate()` detects counter resets by checking if the value suddenly decreases.
+  - If a decrease is detected, Prometheus assumes: The counter restarted, not that the metric actually went negative.
+  - So it ignores the drop and calculates the rate using the new counter sequence.
+    ```code
+    Before restart: 100 → 120 → 140
+    After restart: 5 → 20 → 40
+    ```
 
 **Basics of PromQL**
 - PromQL operates on time-series data and supports instant vector, range vector, scalar, and string types.
