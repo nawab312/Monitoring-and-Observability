@@ -29,6 +29,9 @@
 
 ![image](https://github.com/user-attachments/assets/c30922fc-2155-4bc6-984a-3ec8106d1b5a)
 
+- Your app runs 3 replicas (pods), and each pod exposes the metric: `http_requests_total`. If you run this query: `rate(http_requests_total[5m])`. Grafana shows 3 separate lines on the graph. How would you modify the query to show the total request rate of the application across all pods as a single line?
+  - `sum(rate(http_requests_total[5m]))`. Dont `rate(sum(http_requests_total)[5m])`. Always apply `rate()` first, then aggregate.
+
 **Rate, Increase, and Delta Functions**
 - These functions operate on range vectors.
 
